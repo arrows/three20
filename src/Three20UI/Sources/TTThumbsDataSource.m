@@ -73,7 +73,7 @@ static CGFloat kThumbSpacing = 4;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL)hasMoreToLoad {
-  return _photoSource.maxPhotoIndex+1 < _photoSource.numberOfPhotos;
+	return (_photoSource.maxPhotoIndex+1 < _photoSource.numberOfPhotos || _photoSource.numberOfPhotos == -1 || _photoSource.numberOfPhotos == 0);
 }
 
 
@@ -121,7 +121,7 @@ static CGFloat kThumbSpacing = 4;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)tableView:(UITableView*)tableView objectForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (id)tableView:(UITableView*)tableView objectForRowAtIndexPath:(NSIndexPath*)indexPath { 
   if (indexPath.row == [tableView numberOfRowsInSection:0]-1 && self.hasMoreToLoad) {
     NSString* text = TTLocalizedString(@"Load More Photos...", @"");
     NSString* caption = nil;

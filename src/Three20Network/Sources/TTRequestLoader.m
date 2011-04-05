@@ -82,15 +82,21 @@ static const NSInteger kLoadMaxRetries = 2;
 #pragma mark Private
 
 
+- (void)start:(NSURL*)URL
+{
+	TTDCONDITIONLOG(TTDFLAG_URLREQUEST, @"Connecting to %@", _urlPath);
+	TTNetworkRequestStarted();
+	
+	TTURLRequest* request = _requests.count == 1 ? [_requests objectAtIndex:0] : nil;
+	NSURLRequest* URLRequest = [_queue createNSURLRequest:request URL:URL];
+	
+	_connection = [[NSURLConnection alloc] initWithRequest:URLRequest delegate:self];
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)connectToURL:(NSURL*)URL {
-  TTDCONDITIONLOG(TTDFLAG_URLREQUEST, @"Connecting to %@", _urlPath);
-  TTNetworkRequestStarted();
-
-  TTURLRequest* request = _requests.count == 1 ? [_requests objectAtIndex:0] : nil;
-  NSURLRequest* URLRequest = [_queue createNSURLRequest:request URL:URL];
-
-  _connection = [[NSURLConnection alloc] initWithRequest:URLRequest delegate:self];
+	[self performSelectorOnMainThread:@selector(start:)
+						   withObject:URL waitUntilDone:NO];
 }
 
 
@@ -373,6 +379,36 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge{
     [_queue loader:self didFailLoadWithError:error];
   }
 }
+
+
+///////////////////////// my stuff
+
+//- (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)response {
+//	NSLog(@"HELLO"); return request; }
+//- (NSInputStream *)connection:(NSURLConnection *)connection needNewBodyStream:(NSURLRequest *)request  {
+//	NSLog(@"HELLO"); return nil;}
+//- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+//	NSLog(@"HELLO"); return YES;}
+//- (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge  {
+//	NSLog(@"HELLO"); }
+//- (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection  {
+//	NSLog(@"HELLO"); return YES; }
+//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response  {
+//	NSLog(@"HELLO"); }
+
+//- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge  {
+//	NSLog(@"HELLO"); }
+//- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data  {
+//	NSLog(@"HELLO"); }
+//- (void)connectionDidFinishLoading:(NSURLConnection *)connection  {
+//	NSLog(@"HELLO"); }
+//- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error  {
+//	NSLog(@"HELLO"); }
+//- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse  {
+//	NSLog(@"HELLO"); }
+//- (void)connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite  {
+//	NSLog(@"HELLO"); }
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

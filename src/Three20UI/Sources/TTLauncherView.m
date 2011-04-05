@@ -45,7 +45,7 @@
 static const CGFloat kMargin = 0;
 static const CGFloat kPadding = 0;
 static const CGFloat kPromptMargin = 40;
-static const CGFloat kPagerHeight = 20;
+static const CGFloat kPagerHeight = 80;
 static const CGFloat kWobbleRadians = 1.5;
 static const CGFloat kSpringLoadFraction = 0.18;
 
@@ -73,7 +73,7 @@ static const NSInteger kDefaultColumnCount = 3;
 - (id)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:frame]) {
     _scrollView = [[TTLauncherScrollView alloc] initWithFrame:
-                   CGRectMake(0, 0, self.width, self.height - kPagerHeight)];
+                   CGRectMake(0, 10, self.width, self.height - kPagerHeight)];
     _scrollView.delegate = self;
     _scrollView.scrollsToTop = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
@@ -131,7 +131,7 @@ static const NSInteger kDefaultColumnCount = 3;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)rowHeight {
-  return round(_scrollView.height / 3);
+  return round(_scrollView.height / 3 - 10);
 }
 
 
@@ -479,12 +479,12 @@ static const NSInteger kDefaultColumnCount = 3;
       [self startDraggingButton:button withEvent:event];
     }
   } else {
-    TT_INVALIDATE_TIMER(_editHoldTimer);
-
-    _editHoldTimer = [NSTimer scheduledTimerWithTimeInterval:kEditHoldTimeInterval
-                              target:self selector:@selector(editHoldTimer:)
-                              userInfo:[TTUserInfo topic:nil strongRef:event weakRef:button]
-                              repeats:NO];
+//    TT_INVALIDATE_TIMER(_editHoldTimer);
+//
+//    _editHoldTimer = [NSTimer scheduledTimerWithTimeInterval:kEditHoldTimeInterval
+//                              target:self selector:@selector(editHoldTimer:)
+//                              userInfo:[TTUserInfo topic:nil strongRef:event weakRef:button]
+//                              repeats:NO];
   }
 }
 
@@ -701,7 +701,7 @@ static const NSInteger kDefaultColumnCount = 3;
 - (void)layoutSubviews {
   [super layoutSubviews];
 
-  _pager.frame = CGRectMake(0, _scrollView.height, self.width, kPagerHeight);
+  _pager.frame = CGRectMake(0, _scrollView.height - 30, self.width, kPagerHeight);
 
   if (!_buttons) {
     [self recreateButtons];

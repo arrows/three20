@@ -95,7 +95,6 @@
 		66FE8BF41264DBC3001E0674 /* TTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6081C111B0C08D00C93CD4 /* TTBaseNavigationController.m */; };
 		66FE8C041264DBC3001E0674 /* UIViewControllerAdditionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F945D118E1B0E00443B46 /* UIViewControllerAdditionTests.m */; };
 		66FE8C051264DBC3001E0674 /* TTURLActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F94B3118E210300443B46 /* TTURLActionTests.m */; };
-		66FE8C1C1264DBFC001E0674 /* libThree20Core-Xcode3.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FC294B1264D78D00F56B19 /* libThree20Core-Xcode3.2.2.a */; };
 		66FE8C1D1264DBFC001E0674 /* libThree20UICommon-Xcode3.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FC29571264D78D00F56B19 /* libThree20UICommon-Xcode3.2.2.a */; };
 		66FE8C1E1264DBFC001E0674 /* libThree20UINavigator-Xcode3.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FE8BFA1264DBC3001E0674 /* libThree20UINavigator-Xcode3.2.2.a */; };
 		6E3C35ED118B75800079637E /* TTNavigatorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E3C35EA118B75800079637E /* TTNavigatorDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -188,26 +187,12 @@
 			remoteGlobalIDString = 6650CAA21262F6E2003FF804;
 			remoteInfo = "Three20Core-Xcode3.2.5";
 		};
-		66FC294A1264D78D00F56B19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EE7366611849C5800A35176 /* Three20Core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 66C2E0FC1262F748006DF55A;
-			remoteInfo = "Three20Core-Xcode3.2.2";
-		};
 		66FC294C1264D78D00F56B19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6EE7366611849C5800A35176 /* Three20Core.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 664961641262EE5000C2C80E;
 			remoteInfo = "UnitTests-Xcode3.2.5";
-		};
-		66FC294E1264D78D00F56B19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EE7366611849C5800A35176 /* Three20Core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 66F9A63C1262ED9F0059C2AE;
-			remoteInfo = "UnitTests-Xcode3.2.2";
 		};
 		66FC29541264D78D00F56B19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -244,13 +229,6 @@
 			remoteGlobalIDString = 665A53D01264D6550032D0BE;
 			remoteInfo = "Three20UICommon-Xcode3.2.2";
 		};
-		66FE8C131264DBD4001E0674 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EE7366611849C5800A35176 /* Three20Core.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 66C2E0D11262F748006DF55A;
-			remoteInfo = "Three20Core-Xcode3.2.2";
-		};
 		66FE8C151264DBEE001E0674 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -263,13 +241,6 @@
 			containerPortal = 6E3C37B4118C96A60079637E /* Three20UICommon.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 665A53E71264D6550032D0BE;
-			remoteInfo = "UnitTests-Xcode3.2.2";
-		};
-		66FE8C191264DBEE001E0674 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EE7366611849C5800A35176 /* Three20Core.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 66F9A62C1262ED9F0059C2AE;
 			remoteInfo = "UnitTests-Xcode3.2.2";
 		};
 		6E3C37B9118C96A60079637E /* PBXContainerItemProxy */ = {
@@ -426,7 +397,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66FE8C1C1264DBFC001E0674 /* libThree20Core-Xcode3.2.2.a in Frameworks */,
 				66FE8C1D1264DBFC001E0674 /* libThree20UICommon-Xcode3.2.2.a in Frameworks */,
 				66FE8C1E1264DBFC001E0674 /* libThree20UINavigator-Xcode3.2.2.a in Frameworks */,
 			);
@@ -674,10 +644,8 @@
 			children = (
 				6EE7366C11849C5800A35176 /* libThree20Core.a */,
 				66FC29491264D78D00F56B19 /* libThree20Core-Xcode3.2.5.a */,
-				66FC294B1264D78D00F56B19 /* libThree20Core-Xcode3.2.2.a */,
 				6EE7366E11849C5800A35176 /* CoreUnitTests.octest */,
 				66FC294D1264D78D00F56B19 /* CoreUnitTests-Xcode3.2.5.octest */,
-				66FC294F1264D78D00F56B19 /* CoreUnitTests-Xcode3.2.2.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -849,7 +817,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				66FE8C141264DBD4001E0674 /* PBXTargetDependency */,
 				66FE8C121264DBD4001E0674 /* PBXTargetDependency */,
 			);
 			name = "Three20UINavigator-Xcode3.2.2";
@@ -870,7 +837,6 @@
 			);
 			dependencies = (
 				66FE8C161264DBEE001E0674 /* PBXTargetDependency */,
-				66FE8C1A1264DBEE001E0674 /* PBXTargetDependency */,
 				66FE8C181264DBEE001E0674 /* PBXTargetDependency */,
 			);
 			name = "Three20UINavigatorUnitTests-Xcode3.2.2";
@@ -969,25 +935,11 @@
 			remoteRef = 66FC29481264D78D00F56B19 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		66FC294B1264D78D00F56B19 /* libThree20Core-Xcode3.2.2.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libThree20Core-Xcode3.2.2.a";
-			remoteRef = 66FC294A1264D78D00F56B19 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		66FC294D1264D78D00F56B19 /* CoreUnitTests-Xcode3.2.5.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "CoreUnitTests-Xcode3.2.5.octest";
 			remoteRef = 66FC294C1264D78D00F56B19 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		66FC294F1264D78D00F56B19 /* CoreUnitTests-Xcode3.2.2.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "CoreUnitTests-Xcode3.2.2.octest";
-			remoteRef = 66FC294E1264D78D00F56B19 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		66FC29551264D78D00F56B19 /* libThree20UICommon-Xcode3.2.5.a */ = {
@@ -1284,11 +1236,6 @@
 			name = "Three20UICommon-Xcode3.2.2";
 			targetProxy = 66FE8C111264DBD4001E0674 /* PBXContainerItemProxy */;
 		};
-		66FE8C141264DBD4001E0674 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Three20Core-Xcode3.2.2";
-			targetProxy = 66FE8C131264DBD4001E0674 /* PBXContainerItemProxy */;
-		};
 		66FE8C161264DBEE001E0674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 66FE8BC51264DBC3001E0674 /* Three20UINavigator-Xcode3.2.2 */;
@@ -1298,11 +1245,6 @@
 			isa = PBXTargetDependency;
 			name = "UnitTests-Xcode3.2.2";
 			targetProxy = 66FE8C171264DBEE001E0674 /* PBXContainerItemProxy */;
-		};
-		66FE8C1A1264DBEE001E0674 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "UnitTests-Xcode3.2.2";
-			targetProxy = 66FE8C191264DBEE001E0674 /* PBXContainerItemProxy */;
 		};
 		6E3C37BF118C96C20079637E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1436,7 +1378,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(BASE_PRODUCT_NAME)-Xcode3.2.2";
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -1452,7 +1394,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(BASE_PRODUCT_NAME)-Xcode3.2.2";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 			};
 			name = Internal;
 		};
@@ -1465,7 +1407,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(BASE_PRODUCT_NAME)-Xcode3.2.2";
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1486,7 +1428,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(BASE_PRODUCT_NAME)-Xcode3.2.2";
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -1507,7 +1449,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(BASE_PRODUCT_NAME)-Xcode3.2.2";
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Internal;
@@ -1526,7 +1468,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(BASE_PRODUCT_NAME)-Xcode3.2.2";
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
@@ -1541,6 +1483,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
+				SDKROOT = iphoneos;
 			};
 			name = Internal;
 		};
@@ -1555,7 +1498,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				PREBINDING = NO;
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Internal;
 		};
@@ -1572,7 +1515,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/../common/Xcode324iOS41Fix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Internal;
@@ -1586,7 +1529,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -1598,7 +1541,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1612,6 +1555,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -1624,6 +1568,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -1640,7 +1585,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/../common/Xcode324iOS41Fix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -1656,7 +1601,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/../common/Xcode324iOS41Fix.pch";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
