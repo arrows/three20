@@ -35,8 +35,7 @@
 @synthesize sourceRect    = _sourceRect;
 @synthesize sourceView    = _sourceView;
 @synthesize sourceButton  = _sourceButton;
-@synthesize transition    = _transition;
- 
+@synthesize transition	  = _transition;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)action {
